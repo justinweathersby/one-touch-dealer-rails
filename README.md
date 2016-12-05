@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# one-touch-dealer-rails
+>>>>>>> 16686fde5a483116e3301cc0a2f6634fac20345c
