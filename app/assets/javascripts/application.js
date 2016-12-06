@@ -11,6 +11,13 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+
+
+//= require lib/jquery-1.11.1.min
+//= require bootstrap-sprockets
+//= require lib/bootstrap-hover-dropdown.min
+//= require lib/jquery.backstretch.min
+//= require lib/wow.min
+//= require lib/retina-1.1.0.min
+//= require lib/jquery.magnific-popup.min
+//= require lib/scripts

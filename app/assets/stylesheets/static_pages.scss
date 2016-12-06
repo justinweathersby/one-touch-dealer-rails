@@ -1,3 +1,587 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+strong { font-weight: 700; }
+
+a, a:hover, a:focus {
+	color: #be5254;
+	text-decoration: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+h1, h2 {
+	margin-top: 10px;
+	font-size: 42px;
+    font-weight: 100;
+    line-height: 54px;
+}
+
+img { max-width: 100%; }
+
+::-moz-selection { background: #be5254; color: #fff; text-shadow: none; }
+::selection { background: #be5254; color: #fff; text-shadow: none; }
+
+
+/***** General style, all sections *****/
+
+.section-container {
+    margin: 0 auto;
+    padding-bottom: 60px;
+    color: #888;
+}
+
+.section-container-full-bg {
+	color: #fff;
+}
+
+.section-description {
+	margin-top: 60px;
+    padding-bottom: 10px;
+}
+
+.section-description h2 {
+	color: #333;
+}
+.section-container-full-bg .section-description h2 { color: #fff; }
+
+.section-description p {
+    margin-top: 30px;
+	padding: 0 120px;
+    font-size: 22px;
+    line-height: 36px;
+}
+.section-container-full-bg .section-description p { opacity: 0.8; }
+
+
+/***** Top menu *****/
+
+.navbar {
+	margin-bottom: 0;
+	background: #333;
+	border: 0;
+	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+}
+
+ul.navbar-nav {
+	font-size: 18px;
+	color: #fff;
+	line-height: 32px;
+}
+
+ul.navbar-nav li a { padding-top: 20px; padding-bottom: 20px; background: #333; color: #fff; }
+ul.navbar-nav li a:hover { background: #333; color: #339bc2; }
+ul.navbar-nav li a:focus { background: #333; color: #fff; outline: 0; }
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus { background: #333; }
+
+.dropdown-menu {
+	background: #333;
+	border: 0;
+	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+	-moz-box-shadow: 0 6px 10px rgba(0, 0, 0, .15); -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, .15); box-shadow: 0 6px 10px rgba(0, 0, 0, .15);
+	-o-transition: all .5s; -moz-transition: all .5s; -webkit-transition: all .5s; -ms-transition: all .5s; transition: all .5s;
+}
+
+ul.navbar-nav li .dropdown-menu a { padding-top: 13px; padding-bottom: 13px; font-size: 16px; line-height: 20px; }
+
+.navbar>.container .navbar-brand { margin-left: 0; }
+
+.navbar-brand {
+	width: 150px;
+	height: 60px;
+	background: url(../img/logo.png) left center no-repeat;
+	text-indent: -99999px;
+}
+
+
+/***** Top content *****/
+
+.top-content {
+    margin: 0 auto;
+    text-align: left;
+    color: #fff;
+}
+
+.inner-bg {
+    padding: 120px 0 80px 0;
+}
+
+.top-content .phone {
+	text-align: center;
+}
+
+.top-content .text {
+	padding-top: 100px;
+}
+
+.top-content .description {
+	margin: 40px 0 10px 0;
+    font-size: 22px;
+    line-height: 36px;
+    opacity: 0.8;
+}
+
+.top-content .top-button {
+	margin-top: 40px;
+}
+
+.top-content .top-button .button-1 {
+	margin-right: 20px;
+}
+
+
+/***** Features *****/
+
+.features-center {
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.features-box {
+	margin-top: 30px;
+}
+
+.features-box h3 {
+	margin-top: 0;
+	font-size: 26px;
+    font-weight: 100;
+    color: #333;
+    line-height: 30px;
+}
+
+.features-box p {
+	font-size: 18px;
+    line-height: 32px;
+}
+
+.features-box .features-box-icon {
+    margin: 0 auto;
+    font-size: 56px;
+    color: #333;
+}
+
+
+/***** How it works *****/
+
+.how-it-works-video {
+	margin-top: 30px;
+	padding-bottom: 20px;
+}
+
+.how-it-works-description {
+	margin-top: 30px;
+	text-align: left;
+}
+
+.how-it-works-description-left { padding-left: 73px; padding-right: 55px; }
+
+.how-it-works-description h3 {
+	margin-top: 0;
+	font-size: 26px;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+.how-it-works-description p {
+	margin-bottom: 40px;
+	font-size: 18px;
+    line-height: 32px;
+    opacity: 0.8;
+}
+.how-it-works-description p:last-child { margin-bottom: 10px; }
+
+
+/* This media query works for medium screen devices (All devices with resolution from 992px to 1199px), for example Computers */
+
+@media (min-width: 1201px){
+
+  ul#how-it-tabs li{
+    width: 33%;
+  }
+}
+
+/* This media query works for small screen devices (All devices with resolution from 768px to 991px), for example tablets */
+
+@media (min-width: 801px) and (max-width: 1200px){
+  ul#how-it-tabs li{
+    width: 45%;
+  }
+}
+
+/* This media query works for extra small screen devices (All devices with below resolution of 767px), for example Iphones, Smart Phones */
+
+@media (max-width: 800px){
+  ul#how-it-tabs li{
+    width: 100%;
+  }
+}
+
+#how-it-tabs {
+  border-bottom: 0px;
+}
+
+#how-it-tabs li {
+    display: inline-block;
+    float: none;
+    margin-bottom: -1px;
+    margin-top:10px;
+}
+#how-it-tabs > li > a {
+    background-color: #d3d3d3;
+    border: medium none;
+    border-radius: 0;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 5px 15px;
+    color: #fff;
+}
+#how-it-tabs > li > a:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#339bc2+0,1179a0+100 */
+    background: #339bc2; /* Old browsers */
+    background: -moz-linear-gradient(top,  #339bc2 0%, #1179a0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #339bc2 0%,#1179a0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #339bc2 0%,#1179a0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#339bc2', endColorstr='#1179a0',GradientType=0 ); /* IE6-9 */
+
+}
+#how-it-tabs > li.active > a, #how-it-tabs > li.active > a:focus, #how-it-tabs > li.active > a:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#339bc2+0,1179a0+100 */
+    background: #339bc2; /* Old browsers */
+    background: -moz-linear-gradient(top,  #339bc2 0%, #1179a0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #339bc2 0%,#1179a0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #339bc2 0%,#1179a0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#339bc2', endColorstr='#1179a0',GradientType=0 ); /* IE6-9 */
+
+    border-color:transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 0;
+    color: #fff;
+    cursor: default;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+div.tabContent {
+  /*border: 1px solid #c9c3ba;
+  padding: 0.5em;
+  background-color: #f1f0ee;
+  display: none;
+  min-width: 400px;
+  width: 400px;
+  min-height: 100px;
+  height: 100px;
+  overflow: auto;*/
+  padding: 50px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.list1{
+	margin: 0 0 0 20px;
+	padding: 0;
+	text-align: left;
+}
+.list1 li{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.how-it-content h2 {
+	margin-top: 0;
+	text-align: left;
+}
+.how-it-content {
+	padding: 50px 0 0;
+}
+.read-more-btn{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px;
+    padding: 7px 20px;
+    background-color: #14ccff;
+    border-color: #14ccff;
+    color: #fff;
+}
+
+/***** Screenshots *****/
+
+.screenshot-box {
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.screenshot-box-left { text-align: right; }
+.screenshot-box-right { text-align: left; }
+
+.screenshot-box img { max-width: 80%; cursor: pointer; }
+
+
+
+
+/***** About us *****/
+
+.about-us-box {
+	padding-top: 30px;
+	padding-bottom: 15px;
+}
+
+.about-us-box h3 {
+	font-size: 26px;
+    font-weight: 100;
+    color: #333;
+    line-height: 30px;
+}
+
+.about-us-box p {
+	font-size: 18px;
+    line-height: 32px;
+}
+
+.about-us-box .about-us-photo {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.about-us-box .about-us-photo img {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #eee;
+	-moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;
+}
+
+.about-us-box .about-us-social {
+    margin-top: 5px;
+}
+
+
+/***** Contact us *****/
+
+.contact-form,
+.contact-address {
+	padding-bottom: 20px;
+	text-align: left;
+}
+
+.contact-form h3,
+.contact-address h3 {
+	padding: 0 0 10px 0;
+	font-size: 26px;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+.contact-form p {
+	margin: 15px 0 0 0;
+	font-size: 18px;
+	line-height: 32px;
+}
+
+.contact-form form {
+	margin: 15px 0 0 0;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 95%;
+    height: 52px;
+    margin-bottom: 5px;
+}
+
+.contact-form form textarea {
+	height: 162px;
+}
+
+.contact-form form .contact-error {
+	border-color: #be5254;
+}
+
+.contact-address .map {
+	height: 210px;
+	margin: 15px 0 40px 0;
+}
+
+.contact-address p {
+	margin-bottom: 5px;
+	font-size: 18px;
+    line-height: 32px;
+}
+
+.contact-address p span { opacity: 0.8; }
+
+.contact-address p i {
+	width: 40px;
+	font-size: 24px;
+	vertical-align: middle;
+}
+
+.contact-address a, .contact-address a:focus { color: #fff; }
+.contact-address a:hover { color: #fff; border-bottom: 1px dotted #fff; }
+
+
+/***** Footer *****/
+
+footer {
+	padding: 25px 0 20px 0;
+	background: #333;
+	text-align: right;
+}
+
+.footer-copyright {
+	margin: 6px 0 0 0;
+	font-size: 18px;
+    line-height: 32px;
+    color: #fff;
+    text-align: left;
+}
+
+.footer-copyright a, .footer-copyright a:focus { color: #fff; }
+.footer-copyright a:hover { color: #fff; border-bottom: 1px dotted #fff; }
+
+
+/***** Full width content *****/
+
+.full-width-text-content {
+	text-align: left;
+}
+
+.full-width-text-content h3 {
+	font-size: 26px;
+    font-weight: 100;
+    color: #333;
+    line-height: 30px;
+}
+
+.full-width-text-content p {
+	font-size: 18px;
+    line-height: 32px;
+}
+
+
+/***** BUTTONS *****/
+.btn-terms{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#339bc2+0,1179a0+100 */
+  background: #339bc2; /* Old browsers */
+  background: -moz-linear-gradient(top,  #339bc2 0%, #1179a0 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #339bc2 0%,#1179a0 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #339bc2 0%,#1179a0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#339bc2', endColorstr='#1179a0',GradientType=0 ); /* IE6-9 */
+
+  color:white;
+  width:100px;
+}
+
+.button-1 {
+	display: inline-block;
+	height: 75px;
+	margin: 0;
+    padding: 0 0 0 15px;
+    background: #000;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 22px;
+    line-height: 22px;
+    color: #fff;
+    text-align: left;
+    -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;
+}
+
+.button-1:hover, .button-1:focus {
+	background: #000;
+	opacity: 0.5;
+	color: #fff;
+}
+
+.button-1 .button-1-left {
+	float: left;
+}
+
+.button-1 .button-1-left i {
+	font-size: 75px;
+	vertical-align: middle;
+}
+
+.button-1 .button-1-right {
+	float: left;
+	width: 160px;
+	margin: 7px 0 0 12px;
+}
+
+.button-1 .button-1-right .button-1-right-top,
+.button-1 .button-1-right .button-1-right-bottom {
+	float: left;
+	width: 100%;
+	font-weight: 400;
+}
+
+.button-1 .button-1-right .button-1-right-bottom {
+	font-size: 34px;
+	line-height: 34px;
+}
+
+
+.button-2 {
+	display: inline-block;
+	height: 75px;
+	margin: 0;
+    padding: 0 0 0 13px;
+    background: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 22px;
+    line-height: 22px;
+    color: #555;
+    text-align: left;
+    -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;
+}
+
+.button-2:hover, .button-2:focus {
+	background: #fff;
+	opacity: 0.6;
+	color: #555;
+}
+
+.button-2 .button-2-left {
+	float: left;
+}
+
+.button-2 .button-2-left i {
+	font-size: 61px;
+	line-height: 71px;
+	color: #a3ca33;
+	vertical-align: middle;
+}
+
+.button-2 .button-2-right {
+	float: left;
+	width: 140px;
+	margin: 7px 0 0 10px;
+}
+
+.button-2 .button-2-right .button-2-right-top,
+.button-2 .button-2-right .button-2-right-bottom {
+	float: left;
+	width: 100%;
+	font-weight: 400;
+}
+
+.button-2 .button-2-right .button-2-right-bottom {
+	font-size: 34px;
+	line-height: 34px;
+}
