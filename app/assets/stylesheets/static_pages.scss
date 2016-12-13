@@ -168,6 +168,10 @@ ul.navbar-nav li .dropdown-menu a { padding-top: 13px; padding-bottom: 13px; fon
     color: #333;
 }
 
+/***** Pricing *********/
+.pricing-container{
+  min-height: calc(100vh - 60px);
+}
 
 /***** How it works *****/
 
@@ -283,16 +287,6 @@ div.tabContent {
   overflow: auto;*/
   padding: 50px 0 0;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 .list1{
