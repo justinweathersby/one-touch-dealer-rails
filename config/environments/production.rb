@@ -56,7 +56,15 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "one-touch-dealer_#{Rails.env}"
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { :host => "onetouchdealer.com" }
+  config.action_mailer.default_url_options = { :host => "one-touch-dealer.herokuapp.com/" }
+  ActionMailer::Base.smtp_settings = {
+  :address        => ENV['EMAIL_ADDRESS'],
+  :port           => '587',
+  :authentication => :plain,
+  :user_name      => ENV['EMAIL_USERNAME'],
+  :password       => ENV['EMAIL_PASSWORD'],
+  :enable_starttls_auto => true
+}
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
