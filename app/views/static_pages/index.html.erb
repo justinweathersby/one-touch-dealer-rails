@@ -8,7 +8,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">One Touch Dealer</a>
+      <%= link_to root_path do %>
+        <%= image_tag "otd-logo-blue.png",:style => "max-height: 60px; padding-left:40px" %>
+      <% end %>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="top-navbar-1">
@@ -41,7 +43,7 @@
         <div class="container">
             <div class="row">
               <div class="col-sm-5 phone wow fadeInLeft">
-                  <img src="assets/img/iphone-1.png" alt="">
+                  <img src="assets/img/iphone-1-landrover.png" alt="" style="padding-top:60px; max-height:600px;">
                 </div>
                 <div class="col-sm-7 text wow fadeInUp">
                     <h1>Keep Your Customers ONE TOUCH Away!</h1>
@@ -97,7 +99,7 @@
              </div>
              <div class="col-md-5">
                <center>
-                 <img src="assets/img/screenshots/1.jpg" alt="" style="max-height:500px">
+                 <img src="assets/img/screenshots/push-notification.png" alt="" style="max-height:450px">
                </center>
              </div>
            </div>
@@ -122,7 +124,7 @@
              </div>
              <div class="col-md-5">
                <center>
-                 <img src="assets/img/screenshots/2.jpg" alt="" style="max-height:500px">
+                 <img src="assets/img/screenshots/service-bmw.png" alt="" style="max-height:450px">
                </center>
              </div>
            </div>
@@ -148,7 +150,7 @@
              </div>
              <div class="col-md-5">
                <center>
-                 <img src="assets/img/screenshots/3.jpg" alt="" style="max-height:500px">
+                 <img src="assets/img/screenshots/contact-bmw.png" alt="" style="max-height:450px">
                </center>
              </div>
            </div>
@@ -290,56 +292,7 @@
 </footer>
 
 
-<!-- Javascript -->
-<!-- <script src="assets/js/jquery-1.11.1.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
-<script src="assets/js/jquery.backstretch.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/retina-1.1.0.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/twitter/jquery.tweet.min.js"></script>
-<script src="assets/js/scripts.js"></script> -->
 
-<script>
-$(document).ready(function () {
-    var timeInterval, tabCount = 0, currnetIndex = 1;
-    tabCount = $('ul#how-it-tabs').find('li a').length;
-    var tabContentObj = $('.tabContent');
-    changeTabIndex();
-    timeInterval = setInterval(function () { changeTabIndex(); }, 2 * 1000);
-
-    function changeTabIndex() {
-        if (currnetIndex > tabCount) {
-            currnetIndex = 1;
-        }
-        tabContentObj.hide();
-        $('ul#how-it-tabs').find('li.active').removeClass('active');
-        var currentAncorObj = $('ul#how-it-tabs').find('li a').eq(currnetIndex - 1);
-        currentAncorObj.parent().addClass('active');
-        $(currentAncorObj.attr('href')).show();
-        currnetIndex++;
-    };
-
-    $('#how-it-tabs li').mouseenter(function () {
-        clearInterval(timeInterval);
-    }).mouseleave(function () {
-        timeInterval = setInterval(function () { changeTabIndex(); }, 4 * 1000);
-    });
-
-    $('#how-it-tabs li a').click(function () {
-        tabContentObj.hide();
-        $('ul#how-it-tabs').find('li.active').removeClass('active');
-        var currentAncorObj = $(this);
-        currnetIndex = $('ul#how-it-tabs').find('li a').index($(this)) + 1;
-        currentAncorObj.parent().addClass('active');
-        $(currentAncorObj.attr('href')).show();
-        currnetIndex++;
-
-        //return false;
-    });
-});
-</script>
 
 <!--[if lt IE 10]>
     <script src="assets/js/placeholder.js"></script>
