@@ -30,10 +30,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script>
+    window.setTimeout(function () {
+         $(".alert-info").slideUp(500, function () {
+              $(".alert-info").hide();
+          });
+     }, 5000);
+   </script>
+   
   </head>
   <body>
-    <!-- <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p> -->
+    <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-info") %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

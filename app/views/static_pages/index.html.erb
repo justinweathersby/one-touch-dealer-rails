@@ -246,29 +246,29 @@
       <div class="row">
           <div class="col-sm-8 col-sm-offset-2 contact-form wow fadeInLeft">
               <h3>Send us a message</h3>
-              <form role="form" action="assets/contact.php" method="post">
+              <%= form_tag contact_form_path, method: :post do %>
                 <div class="form-group">
-                  <label class="sr-only" for="contact-email">Email</label>
-                    <input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
-                  </div>
-                    <div class="form-group">
-                  <label class="sr-only" for="dealershipName">Dealership Name</label>
-                    <input type="text" name="dealershipName" placeholder="Dealership Name..." class="contact-email form-control" id="contact-email">
-                  </div>
-                    <div class="form-group">
-                  <label class="sr-only" for="dealershipSite">Dealership Web Address</label>
-                    <input type="text" name="dealershipSite" placeholder="Dealership Website..." class="contact-email form-control" id="contact-email">
-                  </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="contact-subject">Subject</label>
-                    <input type="text" name="subject" placeholder="Subject..." class="contact-subject form-control" id="contact-subject">
-                  </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="contact-message">Message</label>
-                    <textarea name="message" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
-                  </div>
-                  <button type="submit" class="btn">Send message</button>
-              </form>
+                  <label class="sr-only" for="contact-email">Contact Email</label>
+                    <%= email_field_tag :email ,nil,placeholder: 'Email...', class: "form-control",required: true %>
+
+                </div>
+                <div class="form-group">
+                  <label class="sr-only" for="contact-dealership-name">Dealership Name</label>
+                    <%= text_field_tag :dealership_name ,nil,placeholder: 'Dealership...', class: "form-control",required: true %>
+
+                </div>
+                <div class="form-group">
+                  <label class="sr-only" for="contact-dealership-website">Dealership Website</label>
+                    <%= text_field_tag :dealership_website ,nil,placeholder: 'http://...', class: "form-control",required: true %>
+                
+                </div>
+                <div class="form-group">
+                  <label class="sr-only" for="contact-message">Message</label>
+                    <%= text_area_tag :message ,nil,placeholder: 'Message...', id: "contact-message",class: "form-control",required: true %>
+
+                </div>
+                <%= submit_tag "Send message",class: "btn contact-btn" %>
+              <% end %>
           </div>
       </div>
   </div>
